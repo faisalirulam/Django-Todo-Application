@@ -1,1 +1,1 @@
-web: gunicorn first.wsgi
+web: gunicorn Todo.first.wsgi
