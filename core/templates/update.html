@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load crispy_forms_filters %}
+{% block title %}
+Update
+{% endblock%}
+{% block content %}
+<section id="todo">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+              <u> <h1 class="text-center display-4">Update To do</h1> </u> 
+            </div>
+            <div class="col-md-12">
+                <form method="POST" >
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <input type="submit" class="btn btn-dark btn-block" value="Update"/>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
+
+
